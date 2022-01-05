@@ -1,0 +1,18 @@
+import java.util.List;
+
+public class SelectTest {
+
+	public SelectTest() {
+		//사원전체목록 얻어오기
+		EmpDAO dao = new EmpDAO();
+		List<EmpVO> list = dao.allEmpSelect();
+		
+		for(EmpVO vo: list) {//확장된 for문으로 돌리기
+			
+		}
+	}
+	
+	public static void main(String[] args) {
+		new SelectTest();
+	}
+}

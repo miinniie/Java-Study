@@ -1,0 +1,8 @@
+
+public class EmpDAO extends DBConn {
+
+	public EmpDAO() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

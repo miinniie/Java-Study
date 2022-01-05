@@ -1,0 +1,21 @@
+
+public class DBConn {
+	static {//객체 만들때보다 먼저 실행된다
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		} catch (ClassNotFoundException c) {
+			System.out.println("드라이브로딩 에러...");
+		}
+	}
+	//멤버변수
+	
+	public DBConn() {
+		// DriverManager: DB를 연결하는 클래스
+		
+		
+		
+	}
+	//DB연결
+	
+	//DB종료
+}

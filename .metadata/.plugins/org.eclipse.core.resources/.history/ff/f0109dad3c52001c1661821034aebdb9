@@ -1,0 +1,38 @@
+import java.util.List;
+
+public class SelectionTest2 {
+
+	public SelectionTest2() {
+		
+		EmpDAO dao2 = new EmpDAO();
+		List<EmpVO> list = dao2.allEmpSelect();
+		
+		for(EmpVO vo: list) {//확장된 for문으로 돌리기
+			if(vo.getEmpno()==7369) {
+			System.out.printf(
+					"사원번호->%d\n"
+					+ "사원명->%s\n"
+					+ "담담업무->%s\n"
+					+ "금여->%3.0f\n"
+					+ "보너스->%0.0f\n",
+					vo.getEmpno(), vo.getEname(), vo.getJob(), 
+					vo.getSal(), vo.getComm());
+			}
+		}
+		
+		
+		/*
+		 실행결과
+		 사원번호: 1234
+		 사원명 -> ___
+		 담당업무->___
+		 급여->____
+		 보너스_>____
+		 */
+	}
+
+	public static void main(String[] args) {
+		new SelectionTest2();
+	}
+
+}

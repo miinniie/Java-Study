@@ -1,0 +1,11 @@
+
+public class algo {
+
+	public static void main(String[] args) {
+		String str = "안녕하세요";
+		String str2 = "안녕하세요2";
+		System.out.println(str.indexOf("하"));
+		System.out.println(str.substring(str.indexOf("하")));
+		System.out.println(str.compareTo(str2));
+	}
+}

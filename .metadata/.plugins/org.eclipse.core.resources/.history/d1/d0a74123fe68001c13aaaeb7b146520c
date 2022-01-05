@@ -1,0 +1,9 @@
+
+public class algo {
+
+	public static void main(String[] args) {
+		String str = new String("¾È³ç");
+		System.out.println(str.indexOf("¾È"));
+		System.out.println(str.substring(str.indexOf("³ç")));
+	}
+}

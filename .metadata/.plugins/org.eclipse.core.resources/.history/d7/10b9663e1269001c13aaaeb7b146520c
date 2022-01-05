@@ -1,0 +1,16 @@
+
+public class algo {
+
+	public static void main(String[] args) {
+		String str = "æ»≥Á«œººø‰";
+		String str2 = "æ»≥Á«œººø‰2";
+		System.out.println(str.indexOf("«œ"));
+		System.out.println(str.substring(str.indexOf("«œ")));
+		System.out.println(str.compareTo(str2));
+		
+		String[] arr = new String[] {"æ»≥Á","æ»≥Á2","æ»≥Á3"};
+		System.out.println(arr[0].toString());
+		System.out.println(arr.length);
+	}
+}
+

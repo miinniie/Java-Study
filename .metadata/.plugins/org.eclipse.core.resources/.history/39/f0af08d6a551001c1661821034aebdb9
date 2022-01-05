@@ -1,0 +1,43 @@
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class EmpDAO extends DBConn {
+
+	public EmpDAO() {
+	}
+	//레코드추가
+	public int empInsert(EmpVO vo) {
+		int result = 0;
+		try {
+		//1.드라이브 로딩
+		//2.DB연결
+		getConn(); //상속받아놓음
+		
+		//3.쿼리문을 이용하여 PreparedStatement 객체를 생성한다. (프로그래밍에서의 쿼리문은 문자열로 그냥 만듦)
+		String sql ="insert into emp(empno, hiredate, ename, sal) "
+			+ "values(?, sysdate, ?, ?)";
+		
+			pstmt = con.prepareStatement(sql); //쿼리문 만들때마다 필요한 변수
+			
+			pstmt.setInt(1,vo.getEmpno()); //물음표 위치, 대입될 값
+			pstmt.setString(2,vo.getEname());
+			pstmt.setDouble(3,vo.getSal());
+			
+			//쿼리문 실행: insert한 레코드 수 리턴(int형) > insert하다가 실패하명 0
+			result = pstmt.executeUpdate();
+			
+			
+		}catch (Exception e) {
+			System.out.println("레코드추가 예외발생..."+e.getMessage());
+		}finally { //예외로 빠지든 안빠지든 실행되는 영역
+			
+			setClose();
+		}
+		return result; //이거왱..
+		
+	};
+
+	//레코드 선택
+	//레코드 수정
+	//레코드 삭제
+}
